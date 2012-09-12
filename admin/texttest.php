@@ -5,19 +5,19 @@ require_once 'PHPUnit/Framework.php';
 require_once 'Console/Getopt.php';
 
 class TextTestResult extends PHPUnit_Framework_TestResult {
-  function addError(&$test, &$t, $time=0)
+  function addError($test, $t, $time=0)
     {
       parent::addError($test, $t, $time);
         echo "E";
     }
 
-    function addFailure(&$test, &$t, $time=0)
+    function addFailure($test, $t, $time=0)
     {
         parent::addFailure($test, $t, $time);
         echo "F";
     }
 
-    function addPassedTest(&$test)
+    function addPassedTest($test)
     {
         parent::addPassedTest($test);
         echo ".";

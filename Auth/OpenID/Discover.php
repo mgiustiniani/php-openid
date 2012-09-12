@@ -363,7 +363,7 @@ function filter_MatchesAnyOpenIDType($service)
     return false;
 }
 
-function filter_MatchesAnyOpenIDConsumerType(&$service)
+function filter_MatchesAnyOpenIDConsumerType($service)
 {
     $uris = $service->getTypes();
 

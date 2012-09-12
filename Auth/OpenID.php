@@ -498,7 +498,7 @@ class Auth_OpenID {
         }
     }
 
-    static function filter($callback, &$sequence)
+    static function filter($callback, $sequence)
     {
         $result = array();
 
@@ -511,7 +511,7 @@ class Auth_OpenID {
         return $result;
     }
 
-    static function update(&$dest, &$src)
+    static function update($dest, $src)
     {
         foreach ($src as $k => $v) {
             $dest[$k] = $v;

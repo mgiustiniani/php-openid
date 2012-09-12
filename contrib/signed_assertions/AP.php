@@ -114,9 +114,9 @@ class AP_OP_StoreRequest
    /**
     * Creates store request and adds it as an extension to AuthRequest object 
       passed to it.
-    * @param &Auth_OpenID_AuthRequest &$auth_request - A reference to 
+    * @param &Auth_OpenID_AuthRequest $auth_request - A reference to 
       the AuthRequest object.
-    * @param &Attribute_Provider &$attributeProvider - A reference to the  
+    * @param &Attribute_Provider $attributeProvider - A reference to the  
       Attribute Provider object.
     * @param string $attribute - The attribute name being asserted.
     * @param string $value - The attribute value being asserted.
@@ -124,7 +124,7 @@ class AP_OP_StoreRequest
     * @return &Auth_OpenID_AuthRequest - Auth_OpenID_AuthRequest object 
                                    returned with StoreRequest extension.
    */
-   static function createStoreRequest(&$auth_request,&$attributeProvider,
+   static function createStoreRequest($auth_request,$attributeProvider,
                                                $attribute,$value,$openid)
    {
       if(!$auth_request){
@@ -150,12 +150,12 @@ class RP_OP_Verify
 {
    /**
     * Verifies a given signed assertion.
-    * @param &Attribute_Verifier &$attributeVerifier - An instance of the class 
+    * @param &Attribute_Verifier $attributeVerifier - An instance of the class 
                                             passed for the verification.
     * @param Auth_OpenID_Response - Response object for extraction.
     * @return boolean - true if successful, false if verification fails.
     */
-   function verifyAssertion(&$attributeVerifier,$response)
+   function verifyAssertion($attributeVerifier,$response)
    {
       $ax_resp=Auth_OpenID_AX_FetchResponse::fromSuccessResponse($response);
       if($ax_resp instanceof Auth_OpenID_AX_FetchResponse){

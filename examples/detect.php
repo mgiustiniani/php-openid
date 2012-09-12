@@ -178,7 +178,7 @@ if (isset($_SERVER['REQUEST_METHOD'])) {
     $r = new PlainText();
 }
 
-function detect_math($r, &$out)
+function detect_math($r, $out)
 {
     $out .= $r->h2('Math support');
     $ext = Auth_OpenID_detectMathLibrary(Auth_OpenID_math_extensions());
@@ -236,7 +236,7 @@ function detect_math($r, &$out)
     }
 }
 
-function detect_random($r, &$out)
+function detect_random($r, $out)
 {
     $out .= $r->h2('Cryptographic-quality randomness source');
     if (Auth_OpenID_RAND_SOURCE === null) {
@@ -308,7 +308,7 @@ function detect_random($r, &$out)
     return $ok;
 }
 
-function detect_stores($r, &$out)
+function detect_stores($r, $out)
 {
     $out .= $r->h2('Data storage');
 
@@ -372,7 +372,7 @@ function detect_stores($r, &$out)
     return true;
 }
 
-function detect_xml($r, &$out)
+function detect_xml($r, $out)
 {
     global $__Auth_Yadis_xml_extensions;
 
@@ -395,7 +395,7 @@ function detect_xml($r, &$out)
     }
 }
 
-function detect_query_corruption($r, &$out)
+function detect_query_corruption($r, $out)
 {
     $out .= $r->h2('Query Corruption');
     if ($_SERVER["QUERY_STRING"]!="test_query=a%26b")
@@ -410,7 +410,7 @@ function detect_query_corruption($r, &$out)
     }
 }
     
-function detect_fetcher($r, &$out)
+function detect_fetcher($r, $out)
 {
     $out .= $r->h2('HTTP Fetching');
 
