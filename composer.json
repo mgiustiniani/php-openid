@@ -1,9 +1,9 @@
 {
-    "name": "raphox/php-openid",
+    "name": "manticora/php-openid",
     "type": "library",
     "description": "OpenID library for PHP5",
     "keywords": ["OpenID", "Authentication", "Server", "Provider", "User"],
-    "homepage": "https://github.com/raphox/php-openid",
+    "homepage": "https://github.com/mgiustiniani/php-openid",
     "license": "Apache License 2.0",
     "authors": [
         {
@@ -13,11 +13,16 @@
         {
             "name": "Raphael A. Araújo",
             "email": "raphox.araujo@gmail.com"
+        },
+                {
+            "name": "Mario Giustiniani",
+            "email": "mariogiustiniani@gmail.com"
         }
     ],
     "require": {
         "php": ">=5.2"
     },
+    "include-path": ["/"],
     "autoload": {
         "psr-0": {
             "": "."
